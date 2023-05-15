@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>FAQ Page</title>
+  <style>
+    /* CSS styles for the FAQ page */
+
+    body{
+        background-color: lightblue;
+    }
+    .question {
+     background-color: lightcoral;
+      font-weight: bold;
+      cursor: pointer;
+    }
+
+    .answer {
+    background-color: lightcoral;
+      display: none;
+      margin-bottom: 10px;
+    }
+  </style>
+</head>
+<body>
+  <h1>Frequently Asked Questions</h1>
+
+  <div class="faq">
+    <div class="question"><li> What is the organization about?</li></div>
+    <div class="answer"> The organization is dedicated to young females that are interested in entrepreneurship and STEM.</div>
+  </div>
+<br> </br>
+  <div class="faq">
+    <div class="question"> How can I join the programs?</div>
+    <div class="answer"> To join the programs, you can follow our instagram page and fill in the forms for each program we post about.</div>
+  </div>
+  <br> </br>
+  <div class="faq">
+    <div class="question"> How do I contact to join?</div>
+    <div class="answer"> You can reach us sending an email, or fill the form in the contact us page. </div>
+  </div>
+
+  <script>
+    // JavaScript code to toggle visibility of answers
+    const questions = document.querySelectorAll('.question');
+
+    questions.forEach(question => {
+      question.addEventListener('click', () => {
+        const answer = question.nextElementSibling;
+        answer.style.display = answer.style.display === 'none' ? 'block' : 'none';
+      });
+    });
+  </script>
+</body>
+</html>

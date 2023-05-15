@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Contact Us</title>
+  <style>
+    /* CSS styles for the Contact Us page */
+    body {
+    background-color: lightblue;
+  }
+  
+  div{
+    background-color: lightcoral;
+  }
+
+    .contact-container {
+      max-width: 1000px;
+      margin: 0 auto;
+      padding: 50px;
+    }
+
+    .contact-container h1 {
+      text-align: center;
+    }
+
+    .contact-info {
+      margin-bottom: 20px;
+    }
+
+    .contact-info strong {
+      display: inline-block;
+      width: 120px;
+    }
+
+    .contact-form input,
+    .contact-form textarea {
+      width: 100%;
+      padding: 10px;
+      margin-bottom: 10px;
+    }
+
+    .contact-form button {
+      padding: 10px 20px;
+    }
+  </style>
+</head>
+<body>
+  <div class="contact-container">
+    <h1>Contact Us</h1>
+
+    <div class="contact-info">
+      <strong>Organization Name:</strong> AWE<br>
+      <strong>Address:</strong> Haifa,Israel <br>
+      <strong>Instagram page:</strong> @awe_arabwomenentrepreneurs <br>
+    </div>
+
+    <h2>About Us</h2>
+    <p>We're a women only organization that aims to empower women in all life stages, and encourage them to join the world of entrepreneurship. </p>
+
+    <h2>Contact Form</h2>
+    <form class="contact-form">
+      <input type="text" placeholder="Name" required>
+      <input type="email" placeholder="Email" required>
+      <textarea placeholder="Message" rows="5" required></textarea>
+      <button type="submit">Send Message</button>
+    </form>
+  </div>
+
+  <script>
+    // JavaScript code for handling form submission
+    const form = document.querySelector('.contact-form');
+
+    form.addEventListener('submit', (e) => {
+      e.preventDefault(); // Prevent form submission for demo purposes
+
+      // Retrieve form data
+      const name = form.querySelector('input[type="text"]').value;
+      const email = form.querySelector('input[type="email"]').value;
+      const message = form.querySelector('textarea').value;
+
+      // Perform form validation and submission
+      if (name && email && message) {
+        // Send form data to server or perform desired action
+        console.log(`Name: ${name}`);
+        console.log(`Email: ${email}`);
+        console.log(`Message: ${message}`);
+
+        // Reset form fields
+        form.reset();
+      }
+    });
+  </script>
+</body>
+</html>
