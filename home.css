@@ -1,7 +1,7 @@
 .topnav {
     background-color: whitesmoke;
     overflow: hidden; 
-    direction: rtl;
+    direction: ltr;
   }
   
   /* Style the links inside the navigation bar */
